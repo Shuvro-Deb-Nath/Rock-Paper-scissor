@@ -7,7 +7,7 @@ const userScorepaear = document.querySelector('#user-score');
 const aiScorepaear = document.querySelector('#ai-score');
 
 const genComChoice = () => {
-    const options = ['rock', 'paper', 'scissors'];
+    const options = ['rock', 'paper', 'scissor'];
     const randomNum = Math.floor(Math.random() * 3);
     return options[randomNum];
 };
@@ -46,8 +46,8 @@ const playGame = (userChoice) => {
         if (userChoice === "rock") {
             userWin = computerChoice === "paper" ? false : true;
         } else if (userChoice === "paper") {
-            userWin = computerChoice === "scissors" ? false : true;
-        } else if (userChoice === "scissors") {
+            userWin = computerChoice === "scissor" ? false : true;
+        } else if (userChoice === "scissor") {
             userWin = computerChoice === "rock" ? false : true;
         }
         showResult(userWin, userChoice, computerChoice);
